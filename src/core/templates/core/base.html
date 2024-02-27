@@ -1,0 +1,25 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% tailwind_css %}
+	</head>
+	<body class="font-sans antialiased">
+		<div class="min-h-screen bg-pink-100">
+			<header class="bg-white shadow border-b border-gray-100">
+				<div>
+					{% include 'core/includes/menu.html' %}
+				</div>
+			</header>
+			<main>
+				{% block content %}(no content){% endblock %}
+			</main>
+			<footer>
+				{% include 'core/includes/footer.html' %}
+			</footer>
+		</div>
+	</body>
+</html>
